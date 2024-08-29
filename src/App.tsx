@@ -1,11 +1,13 @@
 import React from 'react';
-import Login from './components/Login';
+import NavBar from './components/HomePage/NavBar/navBar';
+import HomePage from './components/HomePage/homePage';
+
 
 const App: React.FC = () => {
     return (
-        <div className="App">
-            <h1>Login</h1>
-            <Login />
+        <div>
+            <NavBar />
+            <HomePage />
         </div>
     );
 };

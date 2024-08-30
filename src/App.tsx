@@ -1,15 +1,12 @@
-import React from 'react';
-import NavBar from './components/HomePage/NavBar/navBar';
-import HomePage from './components/HomePage/homePage';
+import { BrowserRouter } from "react-router-dom";
+import { AppRoutes } from "./routes/Root";
+import "./App.css";
 
-
-const App: React.FC = () => {
-    return (
-        <div>
-            <NavBar />
-            <HomePage />
-        </div>
-    );
-};
-
+function App() {
+  return (
+       <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+  );
+}
 export default App;

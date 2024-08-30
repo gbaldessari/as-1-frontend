@@ -1,4 +1,4 @@
-export const navBarStyles = {
+export const homeBarStyles = {
     navbar: {
         display: 'flex',
         justifyContent: 'space-between',

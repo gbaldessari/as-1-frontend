@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { enrolledSubjects } from '../../commons/mocks/studentEnrollment';
 import { schedulePageStyles } from './schedule.page.styles';
+import ScheduleBar from '../Bar/schedule.bar';
 import { timeBlocks } from '../../commons/commonComponents';
 
 const SchedulePage: React.FC = () => {
+    const [schedule, setSchedule] = useState(enrolledSubjects);
+
+    const handleSelectSchedule = (view: string) => {
+        if (view === 'student') {
+            setSchedule(enrolledSubjects);
+        } else {
+            setSchedule([]);
+        }
+    };
+
     return (
         <div style={schedulePageStyles.container}>
+            <ScheduleBar onSelectSchedule={handleSelectSchedule} />
             <section style={schedulePageStyles.scheduleArea}>
-                <h2 style={schedulePageStyles.sectionTitle}>Horario del Estudiante</h2>
                 <table style={schedulePageStyles.scheduleTable}>
                     <thead>
                         <tr>
@@ -21,7 +33,7 @@ const SchedulePage: React.FC = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {generateEmptyScheduleRows()}
+                        {generateScheduleRows(schedule)}
                     </tbody>
                 </table>
             </section>
@@ -29,13 +41,20 @@ const SchedulePage: React.FC = () => {
     );
 };
 
-const generateEmptyScheduleRows = () => {
+const generateScheduleRows = (schedule: any) => {
     return timeBlocks.map(({ label, start, end }) => (
         <tr key={label}>
             <td style={schedulePageStyles.scheduleTableCell}>{`${label} (${start}-${end})`}</td>
-            {['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'].map((day) => (
-                <td key={day} style={schedulePageStyles.scheduleTableCell}></td>
-            ))}
+            {['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'].map((day) => {
+                const classBlock = schedule?.find((subject: any) =>
+                    subject.blocks.find((block: any) => block.block === label && block.day === day)
+                );
+                return (
+                    <td key={day} style={classBlock ? { ...schedulePageStyles.scheduleTableCell, ...schedulePageStyles.classBlockCell } : schedulePageStyles.scheduleTableCell}>
+                        {classBlock ? classBlock.name : ''}
+                    </td>
+                );
+            })}
         </tr>
     ));
 };

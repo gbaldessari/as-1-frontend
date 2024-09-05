@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "../components/HomePage/Home";
-import Schedule from "../components/SchedulePage/Schedule";
+import Home from "../screens/HomePage/Home";
+import Schedule from "../screens/SchedulePage/Schedule";
 
 
 export const AppRoutes: React.FC<{}> = () => {

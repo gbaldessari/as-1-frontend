@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { AppRoutes } from "./routes/AppRoutes";
 import "./App.css";
-import Sidebar from "./components/SideBar/SideBar";
+import Sidebar from "./screens/SideBar/SideBar";
 function App() {
   return (
     <BrowserRouter>

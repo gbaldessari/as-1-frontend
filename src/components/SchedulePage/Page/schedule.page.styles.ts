@@ -1,5 +1,7 @@
 export const schedulePageStyles = {
     container: {
+        justifyContent: 'center',
+        alignItems: 'center',
         padding: '2rem',
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         color: '#f4f4f4',
@@ -32,7 +34,7 @@ export const schedulePageStyles = {
         color: '#ddd',
     },
     scheduleTable: {
-        width: '90%',
+        width: '100%',
         margin: '0 auto',
         borderCollapse: 'collapse' as 'collapse',
         backgroundColor: '#444',
@@ -44,12 +46,15 @@ export const schedulePageStyles = {
     scheduleTableCell: {
         padding: '1.5rem',
         textAlign: 'center' as 'center',
-        borderBottom: '1px solid #555',
+        border: '2px solid #555',
         backgroundColor: '#333',
     },
     classBlockCell: {
-        backgroundColor: '#444',
-        borderRadius: '6px',
-        border: '1px solid #555',
+        backgroundColor: '#666',
+        color: '#fff',
+        borderRadius: '8px',
+        border: '2px solid #444',
+        padding: '1rem',
+        fontWeight: 'bold',
     },
   };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { homePageStyles } from './home.page.styles';
 import { timeBlocks } from '../../commons/commonComponents';
+import { ejemploHorarios } from '../../commons/mocks/ejemploHorarios';
 
 const HomePage: React.FC = () => {
     return (
@@ -12,11 +13,10 @@ const HomePage: React.FC = () => {
                 </p>
             </header>
             <section style={homePageStyles.schedulePreview}>
-                <h2 style={homePageStyles.sectionTitle}>Vista Previa del Horario</h2>
                 <table style={homePageStyles.scheduleTable}>
                     <thead>
                         <tr>
-                            <th>Bloque</th>
+                            <th style={{width: '10%'}}>Bloque</th>
                             <th>Lunes</th>
                             <th>Martes</th>
                             <th>Miércoles</th>
@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {generateScheduleRows()}
+                        {generateScheduleRows(ejemploHorarios)}
                     </tbody>
                 </table>
             </section>
@@ -35,47 +35,17 @@ const HomePage: React.FC = () => {
     );
 };
 
-const generateScheduleRows = () => {
-    
-    const schedule: { [key: string]: { block: string; subject: string; }[] } = {
-        'Lunes': [
-            { block: 'A', subject: 'Programación' },
-            { block: 'B', subject: 'Programación' },
-            { block: 'C', subject: 'Física II' },
-        ],
-        'Martes': [
-            { block: 'B', subject: 'Química' },
-            { block: 'D', subject: 'Física II' },
-            { block: 'E', subject: 'Álgebra II' },
-        ],
-        'Miércoles': [
-            { block: 'A', subject: 'Dialogo y Fe' },
-            { block: 'C', subject: 'Cálculo II' },
-            { block: 'F', subject: 'Álgebra II' },
-        ],
-        'Jueves': [
-            { block: 'C', subject: 'Química' },
-            { block: 'D', subject: 'Cálculo II' },
-            { block: 'G', subject: 'Álgebra II' },
-        ],
-        'Viernes': [
-            { block: 'A', subject: 'Inglés II' },
-            { block: 'E', subject: 'Cálculo II' },
-        ],
-        'Sábado': [
-            { block: 'F', subject: 'Inglés II' },
-        ],
-        'Domingo': [],
-    };
-
+const generateScheduleRows = (schedule: any) => {
     return timeBlocks.map(({ label, start, end }) => (
         <tr key={label}>
             <td style={homePageStyles.scheduleTableCell}>{`${label} (${start}-${end})`}</td>
             {['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'].map((day) => {
-                const classBlock = schedule[day]?.find(block => block.block === label);
+                const classBlock = schedule?.find((subject: any) =>
+                    subject.blocks.find((block: any) => block.block === label && block.day === day)
+                );
                 return (
                     <td key={day} style={classBlock ? { ...homePageStyles.scheduleTableCell, ...homePageStyles.classBlockCell } : homePageStyles.scheduleTableCell}>
-                        {classBlock ? classBlock.subject : ''}
+                        {classBlock ? classBlock.name : ''}
                     </td>
                 );
             })}

@@ -1,18 +1,25 @@
 export const homeBarStyles = {
-    navbar: {
+    homebar: {
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center', // Cambiado de 'space-between' a 'center'
         alignItems: 'center',
         padding: '1rem',
         backgroundColor: '#333',
         color: '#fff',
+        position: 'fixed',
+        top: '0',
+        width: '100%',
+        zIndex: 999,
     },
     logo: {
         fontSize: '1.5rem',
+        textAlign: 'center', // Añadido para centrar el texto dentro del logo
     },
     loginForm: {
         display: 'flex',
         alignItems: 'center',
+        position: 'absolute', // Añadido para posicionar el formulario de login
+        right: '5rem', // Añadido para alinear el formulario a la derecha
     },
     input: {
         marginRight: '0.5rem',

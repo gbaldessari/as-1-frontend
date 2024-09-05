@@ -1,10 +1,11 @@
 export const homePageStyles = {
     container: {
+        justifyContent: 'center',
+        alignItems: 'center',
         padding: '2rem',
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         color: '#f4f4f4',
         backgroundColor: '#2c2c2c',
-        minHeight: '100vh',
     },
     header: {
         textAlign: 'center' as 'center',
@@ -27,13 +28,8 @@ export const homePageStyles = {
         textAlign: 'center' as 'center',
         width: '100%',
     },
-    sectionTitle: {
-        fontSize: '2rem',
-        marginBottom: '1.5rem',
-        color: '#ddd',
-    },
     scheduleTable: {
-        width: '90%',
+        width: '100%',
         margin: '0 auto',
         borderCollapse: 'collapse' as 'collapse',
         backgroundColor: '#444',
@@ -45,7 +41,7 @@ export const homePageStyles = {
     scheduleTableCell: {
         padding: '1.5rem',
         textAlign: 'center' as 'center',
-        borderBottom: '1px solid #555',
+        border: '2px solid #555',
         backgroundColor: '#333',
     },
     classBlockCell: {

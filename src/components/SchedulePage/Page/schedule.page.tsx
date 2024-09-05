@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { enrolledSubjects } from '../../commons/mocks/studentEnrollment';
+import { ejemploHorarios } from '../../commons/mocks/ejemploHorarios';
 import { schedulePageStyles } from './schedule.page.styles';
 import ScheduleBar from '../Bar/schedule.bar';
 import { timeBlocks } from '../../commons/commonComponents';
 
 const SchedulePage: React.FC = () => {
-    const [schedule, setSchedule] = useState(enrolledSubjects);
+    const [schedule, setSchedule] = useState(ejemploHorarios);
 
     const handleSelectSchedule = (view: string) => {
         if (view === 'student') {
-            setSchedule(enrolledSubjects);
+            setSchedule(ejemploHorarios);
         } else {
             setSchedule([]);
         }
@@ -22,7 +22,7 @@ const SchedulePage: React.FC = () => {
                 <table style={schedulePageStyles.scheduleTable}>
                     <thead>
                         <tr>
-                            <th>Bloque</th>
+                            <th style={{width: '10%'}}>Bloque</th>
                             <th>Lunes</th>
                             <th>Martes</th>
                             <th>Miércoles</th>

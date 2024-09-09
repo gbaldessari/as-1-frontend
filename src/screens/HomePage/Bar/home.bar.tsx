@@ -27,25 +27,27 @@ const HomeBar: React.FC = () => {
   return (
     <nav style={homeBarStyles.homebar as React.CSSProperties}>
       <div style={homeBarStyles.logo as React.CSSProperties}>
-        <h1>Educa Nexo 2.0</h1>
+        <h1 style={{marginBottom: '5rem'}}>Educa Nexo 2.0</h1>
       </div>
-      <form onSubmit={handleSubmit} style={homeBarStyles.loginForm as React.CSSProperties}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          style={homeBarStyles.input}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          style={homeBarStyles.input}
-        />
-        <button type="submit" style={homeBarStyles.button}>Login</button>
-      </form>
+      <div>
+        <form onSubmit={handleSubmit} style={homeBarStyles.loginForm as React.CSSProperties}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={homeBarStyles.input}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            style={homeBarStyles.input}
+          />
+          <button type="submit" style={homeBarStyles.button}>Login</button>
+        </form>
+      </div>
     </nav>
   );
 };

@@ -2,7 +2,7 @@ export const schedulePageStyles = {
     container: {
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '2rem',
+        padding: '3rem',
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         color: '#f4f4f4',
         backgroundColor: '#2c2c2c',

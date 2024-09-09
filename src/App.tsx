@@ -1,17 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
-import { AppRoutes } from "./routes/AppRoutes";
 import "./App.css";
-import Sidebar from "./screens/SideBar/SideBar";
+import Layout from "./screens/Layout";
+
 function App() {
   return (
     <BrowserRouter>
-      <div style={{ position: "fixed", left: 20, right: 20, width: '100%', }}>
-        <Sidebar />
-        <div style={{display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'auto',}}>
-          <AppRoutes />
-        </div>
-      </div>
+      <Layout /> {/* Usamos el nuevo componente que maneja la lógica de Sidebar */}
     </BrowserRouter>
   );
 }
+
 export default App;

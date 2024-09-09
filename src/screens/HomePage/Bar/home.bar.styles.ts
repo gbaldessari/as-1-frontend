@@ -3,16 +3,16 @@ export const homeBarStyles = {
         display: 'flex',
         justifyContent: 'center', // Cambiado de 'space-between' a 'center'
         alignItems: 'center',
-        padding: '1rem',
         backgroundColor: '#333',
         color: '#fff',
         position: 'fixed',
         top: '0',
         width: '100%',
-        zIndex: 999,
+        borderBottom: '3px solid #555',
     },
     logo: {
-        fontSize: '1.5rem',
+        marginTop: '1rem', // Añadido para separar el logo del borde superior
+        fontSize: '2rem',
         textAlign: 'center', // Añadido para centrar el texto dentro del logo
     },
     loginForm: {

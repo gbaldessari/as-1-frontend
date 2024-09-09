@@ -1,14 +1,18 @@
 export const scheduleBarStyles = {
     controlBar: {
         display: 'flex',
-        justifyContent: 'center',
-        padding: '1rem',
+        justifyContent: 'center', // Cambiado de 'space-between' a 'center'
+        alignItems: 'center',
         backgroundColor: '#333',
-        borderBottom: '2px solid #444',
-        marginBottom: '2rem',
+        color: '#fff',
+        position: 'fixed',
+        top: '0',
+        width: '100%',
+        padding: '1rem',
+        zIndex: 999,
+        borderBottom: '3px solid #555',
     },
     dropdown: {
-        padding: '0.75rem',
         fontSize: '1rem',
         backgroundColor: '#555',
         color: '#fff',

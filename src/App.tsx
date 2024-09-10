@@ -5,7 +5,7 @@ import Layout from "./screens/Layout";
 function App() {
   return (
     <BrowserRouter>
-      <Layout /> {/* Usamos el nuevo componente que maneja la lógica de Sidebar */}
+      <Layout />
     </BrowserRouter>
   );
 }

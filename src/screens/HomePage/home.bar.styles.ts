@@ -1,7 +1,7 @@
 export const homeBarStyles = {
     homebar: {
         display: 'flex',
-        justifyContent: 'center', // Cambiado de 'space-between' a 'center'
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#333',
         color: '#fff',
@@ -11,15 +11,15 @@ export const homeBarStyles = {
         borderBottom: '3px solid #555',
     },
     logo: {
-        marginTop: '1rem', // Añadido para separar el logo del borde superior
+        marginTop: '1rem',
         fontSize: '2rem',
-        textAlign: 'center', // Añadido para centrar el texto dentro del logo
+        textAlign: 'center',
     },
     loginForm: {
         display: 'flex',
         alignItems: 'center',
-        position: 'absolute', // Añadido para posicionar el formulario de login
-        right: '5rem', // Añadido para alinear el formulario a la derecha
+        position: 'absolute',
+        right: '5rem',
     },
     input: {
         marginRight: '0.5rem',

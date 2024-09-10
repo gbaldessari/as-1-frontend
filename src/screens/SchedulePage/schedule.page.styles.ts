@@ -6,7 +6,6 @@ export const schedulePageStyles = {
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         color: '#f4f4f4',
         backgroundColor: '#2c2c2c',
-        minHeight: '100vh',
     },
     header: {
         textAlign: 'center' as 'center',
@@ -35,7 +34,7 @@ export const schedulePageStyles = {
     },
     scheduleTable: {
         width: '100%',
-        margin: '0 auto',
+        marginLeft: '2rem',
         borderCollapse: 'collapse' as 'collapse',
         backgroundColor: '#444',
         color: '#fff',
@@ -50,6 +49,7 @@ export const schedulePageStyles = {
         backgroundColor: '#333',
     },
     classBlockCell: {
+        cursor: 'pointer',
         backgroundColor: '#666',
         color: '#fff',
         borderRadius: '8px',
@@ -57,4 +57,40 @@ export const schedulePageStyles = {
         padding: '1rem',
         fontWeight: 'bold',
     },
-  };
+    overlay: {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(44, 44, 44, 0.95)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 1000,
+    },
+    overlayContent: {
+        backgroundColor: '#333',
+        padding: '2.5rem',
+        borderRadius: '12px',
+        color: '#f4f4f4',
+        textAlign: 'center',
+        boxShadow: '0 8px 20px rgba(0, 0, 0, 0.5)',
+        width: '90%',
+        maxWidth: '500px',
+    },
+    overlayButton: {
+        marginTop: '1.5rem',
+        padding: '0.8rem 1.5rem',
+        backgroundColor: '#444',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '8px',
+        cursor: 'pointer',
+        fontSize: '1rem',
+        transition: 'background-color 0.3s ease',
+    },
+    overlayButtonHover: {
+        backgroundColor: '#555',
+    },
+};

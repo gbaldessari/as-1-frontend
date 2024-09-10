@@ -1,7 +1,7 @@
 import React from 'react';
 import { homePageStyles } from './home.page.styles';
 import { timeBlocks } from '../../commons/commonComponents';
-import { ejemploHorarios } from '../../commons/mocks/ejemploHorarios';
+import { ejemploHorarios } from '../../commons/ejemploHorarios';
 
 const HomePage: React.FC = () => {
     return (
@@ -23,7 +23,6 @@ const HomePage: React.FC = () => {
                             <th>Jueves</th>
                             <th>Viernes</th>
                             <th>Sábado</th>
-                            <th>Domingo</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,7 +38,7 @@ const generateScheduleRows = (schedule: any) => {
     return timeBlocks.map(({ label, start, end }) => (
         <tr key={label}>
             <td style={homePageStyles.scheduleTableCell}>{`${label} (${start}-${end})`}</td>
-            {['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'].map((day) => {
+            {['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'].map((day) => {
                 const classBlock = schedule?.find((subject: any) =>
                     subject.blocks.find((block: any) => block.block === label && block.day === day)
                 );

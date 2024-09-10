@@ -1,9 +1,11 @@
 import React from 'react';
-import SchedulePage from './Page/schedule.page';
+import SchedulePage from './schedule.page';
+import ScheduleBar from './schedule.bar';
 
 const Schedule: React.FC = () => {
   return (
     <div>
+      <ScheduleBar />
       <SchedulePage />
     </div>
   );

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { loginService } from '../../../services/auth/auth.service';
+import { loginService } from '../../services/auth/auth.service';
 import { useNavigate } from 'react-router-dom';
 import { homeBarStyles } from './home.bar.styles';
+import Cookies from 'js-cookie';
 
 const HomeBar: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -14,8 +15,8 @@ const HomeBar: React.FC = () => {
     try {
       const result = await loginService({ email, password });
       if (result.success) {
-        console.log('Login exitoso');
-        navigator('/schedule');
+        Cookies.set('token', result.data.accessToken);
+        navigator('/student/schedule');
       } else {
         console.error('Error en el login:', result.error);
       }

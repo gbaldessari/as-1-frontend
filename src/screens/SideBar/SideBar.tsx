@@ -16,9 +16,9 @@ const SideBar: React.FC = () => {
           </button>
           {isOpen && (
               <nav style={SideBarStyles.nav}>
-                  <Link to="/home" style={SideBarStyles.navLink}>Home</Link>
-                  <Link to="/schedule" style={SideBarStyles.navLink}>Horario</Link>
-                  <Link to="/settings" style={SideBarStyles.navLink}>Configuración</Link>
+                  <Link to="/student/schedule" style={SideBarStyles.navLink}>Horario</Link>
+                  <Link to="/student/projection" style={SideBarStyles.navLink}>Crear Proyección</Link>
+                  <Link to="/home" style={SideBarStyles.navLink}>Cerrar Sesión</Link>
               </nav>
           )}
       </div>

@@ -7,7 +7,7 @@ interface ProtectedRouteProps {
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const usertoken = Cookies.get('token');
-  if (!usertoken) {
+  if (usertoken === undefined) {
     return <Navigate to="/Home" replace />;
   }
   return children;

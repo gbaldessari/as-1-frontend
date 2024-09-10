@@ -9,7 +9,7 @@ export const SideBarStyles = {
       padding: '1rem',
       boxShadow: '2px 0 5px rgba(0, 0, 0, 0.3)',
       transition: 'width 0.3s ease',
-      zIndex: 1000, // Hace que la barra esté sobre el contenido
+      zIndex: 1000,
   },
   toggleButton: {
       position: 'absolute' as 'absolute',

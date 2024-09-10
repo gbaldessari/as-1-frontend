@@ -1,7 +1,7 @@
 export const scheduleBarStyles = {
     controlBar: {
         display: 'flex',
-        justifyContent: 'center', // Cambiado de 'space-between' a 'center'
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#333',
         color: '#fff',

@@ -1,6 +1,6 @@
-import { Subject } from "./subjects.types";
+import { Subject } from "../subjects.types";
 
-export const subjects: Subject[] = [
+export const datosAsignaturas: Subject[] = [
     {
       id: '1',
       code: 'PROG101',

@@ -1,8 +1,7 @@
-export const schedulePageStyles = {
+export const scheduleStyles = {
     container: {
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '3rem',
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         color: '#f4f4f4',
         backgroundColor: '#2c2c2c',
@@ -24,7 +23,7 @@ export const schedulePageStyles = {
         fontSize: '1.25rem',
     },
     scheduleArea: {
-        marginTop: '3rem',
+        margin: '6rem',
         textAlign: 'center' as 'center',
     },
     sectionTitle: {
@@ -43,7 +42,7 @@ export const schedulePageStyles = {
         boxShadow: '0 10px 20px rgba(0, 0, 0, 0.3)',
     },
     scheduleTableCell: {
-        padding: '1.5rem',
+        padding: '1.3rem',
         textAlign: 'center' as 'center',
         border: '2px solid #555',
         backgroundColor: '#333',
@@ -92,5 +91,28 @@ export const schedulePageStyles = {
     },
     overlayButtonHover: {
         backgroundColor: '#555',
+    },
+    bar: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center' as 'center',
+        backgroundColor: '#333',
+        color: '#fff',
+        position: 'fixed',
+        top: '0',
+        width: '100%',
+        padding: '2rem',
+        zIndex: 999,
+        borderBottom: '3px solid #555',
+    },
+    dropdown: {
+        fontSize: '1rem',
+        backgroundColor: '#555',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '4px',
+        cursor: 'pointer',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
     },
 };

@@ -1,4 +1,4 @@
-import { Subject } from "./subjects.types";
+import { Subject } from "../subjects.types";
 
 export const ejemploHorarios: Subject[] = [
   {

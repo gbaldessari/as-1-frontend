@@ -1,8 +1,8 @@
-export const homePageStyles = {
+export const homeStyles = {
     container: {
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '7rem',
+        marginTop: '7rem',
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         color: '#f4f4f4',
         backgroundColor: '#2c2c2c',
@@ -51,5 +51,43 @@ export const homePageStyles = {
         border: '2px solid #444',
         padding: '1rem',
         fontWeight: 'bold',
+    },
+    homebar: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#333',
+        color: '#fff',
+        position: 'fixed',
+        top: '0',
+        width: '100%',
+        borderBottom: '3px solid #555',
+    },
+    logo: {
+        marginTop: '1rem',
+        fontSize: '2rem',
+        textAlign: 'center',
+    },
+    loginForm: {
+        display: 'flex',
+        alignItems: 'center',
+        position: 'absolute',
+        right: '5rem',
+    },
+    input: {
+        marginRight: '0.5rem',
+        padding: '0.5rem',
+        fontSize: '1rem',
+        borderRadius: '4px',
+        border: '1px solid #ccc',
+    },
+    button: {
+        padding: '0.5rem 1rem',
+        fontSize: '1rem',
+        backgroundColor: '#666',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '4px',
+        cursor: 'pointer',
     },
 };

@@ -1,19 +1,20 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "../screens/HomePage/Home";
-import Schedule from "../screens/SchedulePage/Schedule";
 import ProtectedRoute from "./ProtectedRoutes";
-import Projection from "../screens/ProyectionPage/Projection";
-
+import SchedulePage from "../screens/Student/SchedulePage/schedule.page";
+import HomePage from "../screens/HomePage/home.page";
+import ProjectionPage from "../screens/Student/ProyectionPage/projection.page";
+import AdvancementPage from "../screens/Student/AdvancementPage/advancement.page";
 
 export const AppRoutes: React.FC<{}> = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/student/schedule" element={<ProtectedRoute><Schedule/></ProtectedRoute>} />
-        <Route path="/student/projection" element={<ProtectedRoute><Projection/></ProtectedRoute>} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/student/schedule" element={<ProtectedRoute><SchedulePage/></ProtectedRoute>} />
+        <Route path="/student/projection" element={<ProtectedRoute><ProjectionPage/></ProtectedRoute>} />
+        <Route path="/student/advancement" element={<ProtectedRoute><AdvancementPage/></ProtectedRoute>} />
       </Routes>
     </div>
   );

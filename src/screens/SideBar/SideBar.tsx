@@ -18,6 +18,7 @@ const SideBar: React.FC = () => {
               <nav style={SideBarStyles.nav}>
                   <Link to="/student/schedule" style={SideBarStyles.navLink}>Horario</Link>
                   <Link to="/student/projection" style={SideBarStyles.navLink}>Crear Proyección</Link>
+                  <Link to="/student/advancement" style={SideBarStyles.navLink}>Avance Curricular</Link>
                   <Link to="/home" style={SideBarStyles.navLink}>Cerrar Sesión</Link>
               </nav>
           )}

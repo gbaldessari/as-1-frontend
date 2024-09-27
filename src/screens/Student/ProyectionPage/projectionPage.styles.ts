@@ -9,9 +9,9 @@ export const projectionPageStyles = {
     },
     header: {
         textAlign: 'center',
-        marginBottom: '3rem',
         width: '100%',
-        padding: '2rem',
+        paddingTop: '2rem',
+        paddingBottom: '2rem',
         borderRadius: '8px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
         margin: '0 auto',
@@ -19,12 +19,11 @@ export const projectionPageStyles = {
         alignItems: 'center',
         backgroundColor: '#333',
         color: '#fff',
-        position: 'fixed',
         top: '0',
         borderBottom: '3px solid #555',
     },
     scheduleArea: {
-        marginTop: '9rem',
+        marginTop: '2rem',
         textAlign: 'center',
         width: '90%',
         marginLeft: 'auto',
@@ -37,11 +36,10 @@ export const projectionPageStyles = {
         backgroundColor: '#444',
         color: '#fff',
         borderRadius: '8px',
-        overflow: 'hidden',
         boxShadow: '0 10px 20px rgba(0, 0, 0, 0.3)',
     },
     scheduleTableCell: {
-        padding: '1.5rem',
+        padding: '1.4rem',
         textAlign: 'center',
         border: '2px solid #555',
         backgroundColor: '#333',
@@ -52,18 +50,6 @@ export const projectionPageStyles = {
         margin: '1rem 0',
         textAlign: 'center',
     },
-    preview: {
-        marginTop: '2rem',
-        backgroundColor: '#333',
-        padding: '1.5rem',
-        borderRadius: '8px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-        color: '#fff',
-        width: '80%',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-    },
-    // New styles for buttons and combo box
     button: {
         padding: '0.8rem 2rem',
         backgroundColor: '#444',
@@ -82,9 +68,6 @@ export const projectionPageStyles = {
         color: '#ccc',
         cursor: 'not-allowed',
     },
-    buttonHover: {
-        backgroundColor: '#555',
-    },
     selectBox: {
         padding: '0.5rem',
         fontSize: '1rem',
@@ -98,7 +81,7 @@ export const projectionPageStyles = {
     },
     saveScheduleButton: {
         padding: '0.8rem 2rem',
-        backgroundColor: '#28a745', // Verde para un botón de guardar
+        backgroundColor: '#28a745',
         color: '#fff',
         border: 'none',
         borderRadius: '8px',
@@ -110,11 +93,11 @@ export const projectionPageStyles = {
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
     },
     saveScheduleButtonDisabled: {
-        backgroundColor: '#888', // Gris para el estado deshabilitado
+        backgroundColor: '#888',
         color: '#ccc',
         cursor: 'not-allowed',
     },
     saveScheduleButtonHover: {
-        backgroundColor: '#218838', // Un verde más oscuro al hacer hover
+        backgroundColor: '#218838',
     },
 };

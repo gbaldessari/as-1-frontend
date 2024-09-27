@@ -7,29 +7,22 @@ export const scheduleStyles = {
         backgroundColor: '#2c2c2c',
     },
     header: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         textAlign: 'center' as 'center',
-        marginBottom: '3rem',
-        backgroundColor: '#444',
+        backgroundColor: '#333',
         color: '#fff',
-        padding: '2rem',
-        borderRadius: '8px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    },
-    headerTitle: {
-        fontSize: '2.5rem',
-        marginBottom: '1rem',
-    },
-    headerSubtitle: {
-        fontSize: '1.25rem',
+        top: '0',
+        width: '100%',
+        paddingTop: '2rem',
+        paddingBottom: '2rem',
+        borderBottom: '3px solid #555',
+        borderRadius: '0 0 8px 8px',
     },
     scheduleArea: {
-        margin: '6rem',
+        margin: '4rem',
         textAlign: 'center' as 'center',
-    },
-    sectionTitle: {
-        fontSize: '2rem',
-        marginBottom: '1.5rem',
-        color: '#ddd',
     },
     scheduleTable: {
         width: '100%',
@@ -38,7 +31,6 @@ export const scheduleStyles = {
         backgroundColor: '#444',
         color: '#fff',
         borderRadius: '8px',
-        overflow: 'hidden',
         boxShadow: '0 10px 20px rgba(0, 0, 0, 0.3)',
     },
     scheduleTableCell: {
@@ -57,7 +49,6 @@ export const scheduleStyles = {
         fontWeight: 'bold',
     },
     overlay: {
-        position: 'fixed',
         top: 0,
         left: 0,
         width: '100%',
@@ -66,7 +57,6 @@ export const scheduleStyles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        zIndex: 1000,
     },
     overlayContent: {
         backgroundColor: '#333',
@@ -92,27 +82,5 @@ export const scheduleStyles = {
     overlayButtonHover: {
         backgroundColor: '#555',
     },
-    bar: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center' as 'center',
-        backgroundColor: '#333',
-        color: '#fff',
-        position: 'fixed',
-        top: '0',
-        width: '100%',
-        padding: '2rem',
-        zIndex: 999,
-        borderBottom: '3px solid #555',
-    },
-    dropdown: {
-        fontSize: '1rem',
-        backgroundColor: '#555',
-        color: '#fff',
-        border: 'none',
-        borderRadius: '4px',
-        cursor: 'pointer',
-        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-    },
+    
 };

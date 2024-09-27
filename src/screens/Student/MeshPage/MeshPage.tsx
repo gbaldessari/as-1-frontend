@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { mallaCurricular } from '../../../commons/mocks/mallaCurricular';
-import { meshPageStyles } from './mesh.styles';
+import { meshPageStyles } from './meshPage.styles';
 
 const MeshPage: React.FC<{}> = () => {
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Subject } from '../../../commons/subjects.types';
 import { datosAsignaturas } from '../../../commons/mocks/datosAsignaturas';
-import { projectionPageStyles } from './projection.styles';
+import { projectionPageStyles } from './projectionPage.styles';
 
 const ProjectionPage: React.FC = () => {
   const [selectedSubjects, setSelectedSubjects] = useState<Subject[]>([]);

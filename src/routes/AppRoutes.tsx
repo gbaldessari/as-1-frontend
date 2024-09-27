@@ -1,11 +1,11 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoutes";
-import SchedulePage from "../screens/Student/SchedulePage/schedule.page";
-import HomePage from "../screens/HomePage/home.page";
-import ProjectionPage from "../screens/Student/ProyectionPage/projection.page";
-import AdvancementPage from "../screens/Student/AdvancementPage/advancement.page";
-import MeshPage from "../screens/Student/MeshPage/mesh.page";
+import SchedulePage from "../screens/Student/SchedulePage/SchedulePage";
+import HomePage from "../screens/HomePage/HomePage";
+import ProjectionPage from "../screens/Student/ProyectionPage/ProjectionPage";
+import AdvancementPage from "../screens/Student/AdvancementPage/AdvancementPage";
+import MeshPage from "../screens/Student/MeshPage/MeshPage";
 
 export const AppRoutes: React.FC<{}> = () => {
   return (

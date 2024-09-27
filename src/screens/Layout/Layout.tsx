@@ -9,9 +9,9 @@ function Layout() {
   const isHomePage = location.pathname === "/" || location.pathname === "/home";
 
   return (
-    <div style={{ position: "fixed", left: 0, right: 0, width: '100%' }}>
+    <div style={layoutStyles.container as React.CSSProperties}>
       {!isHomePage && <Sidebar />}
-      <div style={layoutStyles.container as React.CSSProperties}>
+      <div style={layoutStyles.body as React.CSSProperties}>
         <AppRoutes />
       </div>
     </div>

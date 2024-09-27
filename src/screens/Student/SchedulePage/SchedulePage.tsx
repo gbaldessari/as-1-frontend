@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { timeBlocks } from "../../../commons/timeBlocks";
 import { ejemploHorarios } from "../../../commons/mocks/ejemploHorarios";
-import { scheduleStyles } from "./schedule.styles";
+import { scheduleStyles } from "./schedulePage.styles";
 import { Block, Subject } from "../../../commons/subjects.types";
 
 const SchedulePage: React.FC = () => {
@@ -18,9 +18,9 @@ const SchedulePage: React.FC = () => {
 
     return (
         <div style={scheduleStyles.container}>
-            <div style={scheduleStyles.bar as React.CSSProperties}>
+            <header style={scheduleStyles.header as React.CSSProperties}>
                 <h1>Horario</h1>
-            </div>
+            </header>
             <section style={scheduleStyles.scheduleArea}>
                 <table style={scheduleStyles.scheduleTable}>
                     <thead>

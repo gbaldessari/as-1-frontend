@@ -1,5 +1,5 @@
 import React from 'react';
-import { advancementPageStyles } from './advancement.styles';
+import { advancementPageStyles } from './advancementPage.styles';
 import { avanceCurricular } from '../../../commons/mocks/avanceCurricular';
 
 const AdvancementPage: React.FC<{}> = () => {
